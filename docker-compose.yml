@@ -1,0 +1,20 @@
+version: '2'
+services:
+  app:
+    build: .
+    ports:
+    - "8080:8080"
+    depends_on:
+    - mypostgres
+    - islands-api
+  mypostgres:
+    image: postgres
+    ports:
+     - "5432:5432"
+    environment:
+     - POSTGRES_PASSWORD=islands
+     - POSTGRES_DB=islands
+  islands-api:
+    image: islands-api
+    ports:
+    - "8090:8090"
