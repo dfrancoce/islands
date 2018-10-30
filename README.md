@@ -1,19 +1,14 @@
 # Islands on a map
 
-This project contains an app that extracts the islands given an API endpoint that provides the tiles for a map.
-
-An island is formed by tiles of type "land" which are surrounded by "water" tiles. Two tiles belong to the same island 
-if they touch. Tiles only count as touching if they are directly vertically or horizontally next to each other. 
-If they touch with their corners they do not count as touching.
-
-## Getting started
-
-These instructions will get you a copy of the project up and running on a local machine for testing purposes.
+Given an API endpoint that provides a tilemap, this solution counts the number of islands in the map. An island is 
+formed by tiles of type "land" which are surrounded by "water" tiles. Two tiles belong to the same island if they touch. 
+Tiles only count as touching if they are directly vertically or horizontally next to each other. If they touch with 
+their corners they do not count as touching.
 
 ### Prerequisites
 
 Docker is required in order to start the app. Also a docker image needs to be created with the API of the following repo 
-(https://github.com/dfrancoce/islands-api) to set up the endpoint we need to consume to get the tiles of the map
+(https://github.com/dfrancoce/islands-api) to set up the endpoint we need to consume to get the tiles of the map.
 
 ### Starting the app
 
